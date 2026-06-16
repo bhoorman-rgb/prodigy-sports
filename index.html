@@ -63,6 +63,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .spec-tag { font-family: var(--font-sub); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; background: rgba(46,74,122,0.2); color: var(--blue-light); }
 .coach-phone { font-family: var(--font-sub); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 6px; }
 .coach-phone:hover { color: var(--blue-light); }
+.coach-book-btn { font-family: var(--font-sub); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--blue); color: var(--text); border: none; padding: 12px 24px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 1rem; transition: background 0.2s; }
+.coach-book-btn:hover { background: var(--blue-light); }
 .summer-banner { background: var(--blue-dim); border: 1px solid var(--blue-light); padding: 2.5rem; margin-bottom: 3rem; display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
 .summer-badge { font-family: var(--font-head); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; background: var(--blue-light); color: var(--text); padding: 5px 14px; display: inline-block; margin-bottom: 0.75rem; }
 .summer-title { font-family: var(--font-head); font-size: 38px; text-transform: uppercase; line-height: 0.95; margin-bottom: 0.5rem; }
@@ -101,6 +103,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .booking-card.featured .booking-features li::before { color: var(--text); }
 .book-btn { font-family: var(--font-sub); font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; color: var(--text); border: 2px solid rgba(245,244,240,0.25); padding: 12px 28px; cursor: pointer; width: 100%; text-decoration: none; display: block; text-align: center; }
 .booking-card.featured .book-btn { background: var(--text); color: var(--blue-dim); border-color: var(--text); }
+.book-btn-row { display: flex; flex-direction: column; gap: 10px; }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; }
 .contact-card { background: var(--dark3); padding: 2rem 1.75rem; }
 .contact-label { font-family: var(--font-sub); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
@@ -162,6 +165,8 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
       <p class="coach-bio">Brendan is Prodigy's speed and strength specialist. Whether you're an athlete chasing a faster 40 time, a stronger squat, or an adult looking to get in shape — Brendan builds programs around your exact goals. Private 1-on-1 sessions available for all athletes and individuals.</p>
       <div class="coach-specs"><span class="spec-tag">Speed & Agility</span><span class="spec-tag">Strength Training</span><span class="spec-tag">Skill Position Specific Training</span><span class="spec-tag">1-on-1 Private</span><span class="spec-tag">Personal Training</span></div>
       <a class="coach-phone" href="tel:5049408017">📞 (504) 940-8017</a>
+      <br>
+      <a class="coach-book-btn" href="https://calendly.com/prodigysportsevent/private-sessions-with-brendan-prodigy-sports" target="_blank">Book with Brendan →</a>
     </div>
     <div class="coach-card fade-up">
       <div class="coach-initials">BF</div>
@@ -172,6 +177,8 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
       <p class="coach-bio">Bryce runs Prodigy OL — elite offensive line training built around technique, toughness, and football IQ. His program is built for linemen who want to dominate the trenches and play at the next level. 1-on-1 and group sessions available in person.</p>
       <div class="coach-specs"><span class="spec-tag">Run Blocking</span><span class="spec-tag">Pass Protection</span><span class="spec-tag">Footwork & Technique</span><span class="spec-tag">Football IQ</span><span class="spec-tag">1-on-1 Sessions</span></div>
       <a class="coach-phone" href="tel:5042522231">📞 (504) 252-2231</a>
+      <br>
+      <a class="coach-book-btn" href="https://calendly.com/prodigysportsevent/private-sessions-prodigy-sports" target="_blank">Book with Bryce →</a>
     </div>
   </div>
 </section>
@@ -193,7 +200,7 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
     </div>
     <div style="display:flex; flex-direction:column; gap:0.75rem; min-width:200px;">
       <a class="btn-white" href="https://calendly.com/prodigysportsevent/group-sessions-prodigy-sports" target="_blank">Book Group Session</a>
-      <a class="btn-ghost" href="https://calendly.com/prodigysportsevent/private-sessions-prodigy-sports" target="_blank" style="text-align:center;">Book Private Session</a>
+      <a class="btn-ghost" href="#book" style="text-align:center;">Book Private Session</a>
     </div>
   </div>
 </section>
@@ -255,11 +262,14 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
       <ul class="booking-features">
         <li>Monday – Saturday</li>
         <li>Fully private session</li>
-        <li>Your coach, your program</li>
+        <li>Pick your coach below</li>
         <li>Speed, strength, or OL</li>
         <li>Any sport or position</li>
       </ul>
-      <a class="book-btn" href="https://calendly.com/prodigysportsevent/private-sessions-prodigy-sports" target="_blank">Book Private Session →</a>
+      <div class="book-btn-row">
+        <a class="book-btn" href="https://calendly.com/prodigysportsevent/private-sessions-with-brendan-prodigy-sports" target="_blank">Book with Brendan →</a>
+        <a class="book-btn" href="https://calendly.com/prodigysportsevent/private-sessions-prodigy-sports" target="_blank">Book with Bryce →</a>
+      </div>
     </div>
   </div>
 </section>
