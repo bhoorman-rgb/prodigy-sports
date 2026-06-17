@@ -22,9 +22,11 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .nav-logo-top { font-family: var(--font-head); font-size: 26px; letter-spacing: 0.06em; color: var(--text); }
 .nav-logo-top span { color: var(--blue-light); }
 .nav-logo-sub { font-family: var(--font-sub); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
-.nav-links { display: flex; gap: 1.75rem; list-style: none; }
+.nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
 .nav-links a { font-family: var(--font-sub); font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
 .nav-links a:hover { color: var(--blue-light); }
+.nav-waiver { color: var(--blue-light) !important; border: 1px solid var(--blue-light); padding: 6px 14px; }
+.nav-waiver:hover { background: var(--blue-light); color: var(--dark) !important; }
 .nav-cta { font-family: var(--font-sub); font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); background: var(--blue); border: none; padding: 10px 22px; cursor: pointer; transition: background 0.2s; text-decoration: none; }
 .nav-cta:hover { background: var(--blue-light); }
 .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 2.5rem 5rem; position: relative; overflow: hidden; }
@@ -104,6 +106,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .book-btn { font-family: var(--font-sub); font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; color: var(--text); border: 2px solid rgba(245,244,240,0.25); padding: 12px 28px; cursor: pointer; width: 100%; text-decoration: none; display: block; text-align: center; }
 .booking-card.featured .book-btn { background: var(--text); color: var(--blue-dim); border-color: var(--text); }
 .book-btn-row { display: flex; flex-direction: column; gap: 10px; }
+.waiver-banner { background: var(--blue-dim); border: 1px solid var(--blue-light); padding: 1.75rem 2rem; margin-top: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.waiver-text { font-family: var(--font-sub); font-size: 14px; color: rgba(245,244,240,0.85); }
+.waiver-text strong { color: var(--text); }
+.waiver-btn { font-family: var(--font-sub); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--text); color: var(--blue-dim); border: none; padding: 12px 26px; cursor: pointer; text-decoration: none; white-space: nowrap; }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; }
 .contact-card { background: var(--dark3); padding: 2rem 1.75rem; }
 .contact-label { font-family: var(--font-sub); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
@@ -134,6 +140,7 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
   <a class="nav-logo" href="#"><span class="nav-logo-top">PRODIGY<span>.</span></span><span class="nav-logo-sub">Sports Performance · Chalmette, LA</span></a>
   <ul class="nav-links">
     <li><a href="#coaches">Coaches</a></li><li><a href="#summer">Summer Program</a></li><li><a href="#services">Services</a></li><li><a href="#book">Book</a></li><li><a href="#contact">Contact</a></li>
+    <li><a class="nav-waiver" href="https://forms.gle/vcGTFuq88wMoeLHdA" target="_blank">Waiver</a></li>
   </ul>
   <a class="nav-cta" href="https://calendly.com/prodigysportsevent/group-sessions-prodigy-sports" target="_blank">Book Now</a>
 </nav>
@@ -203,6 +210,10 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
       <a class="btn-ghost" href="#book" style="text-align:center;">Book Private Session</a>
     </div>
   </div>
+  <div class="waiver-banner fade-up">
+    <div class="waiver-text">⚠️ <strong>First time training with us?</strong> Every athlete must complete our liability waiver before their first session.</div>
+    <a class="waiver-btn" href="https://forms.gle/vcGTFuq88wMoeLHdA" target="_blank">Complete Waiver →</a>
+  </div>
 </section>
 
 <div class="section-divider"></div>
@@ -238,7 +249,7 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
   <div class="fade-up">
     <div class="eyebrow">Schedule Your Spot</div>
     <h2 class="sec-title">Book a<br>Session</h2>
-    <p style="color:var(--muted);font-size:15px;max-width:560px;margin-bottom:2.5rem;">All bookings go through Calendly — you pick your time slot and we get notified instantly.</p>
+    <p style="color:var(--muted);font-size:15px;max-width:560px;margin-bottom:2.5rem;">All bookings go through Calendly — you pick your time slot and we get notified instantly. First-timers, don't forget the waiver below before you come in.</p>
   </div>
   <div class="booking-grid">
     <div class="booking-card fade-up">
@@ -272,6 +283,10 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
       </div>
     </div>
   </div>
+  <div class="waiver-banner fade-up">
+    <div class="waiver-text">📋 <strong>Required for all new athletes:</strong> Sign the liability waiver before your first session — only takes a minute.</div>
+    <a class="waiver-btn" href="https://forms.gle/vcGTFuq88wMoeLHdA" target="_blank">Complete Waiver →</a>
+  </div>
 </section>
 
 <section class="section section-dark2" id="contact">
@@ -282,6 +297,7 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
     <div class="contact-card fade-up"><div class="contact-label">Group Session Hours</div><div class="contact-val">5:00 – 6:00 PM</div><div class="contact-sub"><span class="contact-highlight">Mon · Tue · Thu only</span><br>May 18 – July 31, 2026</div></div>
     <div class="contact-card fade-up"><div class="contact-label">Private Session Availability</div><div class="contact-val">Mon – Sat</div><div class="contact-sub"><span class="contact-highlight">By appointment only</span><br>Schedule via Calendly</div></div>
     <div class="contact-card fade-up"><div class="contact-label">Location</div><div class="contact-val">Chalmette, LA</div><div class="contact-sub">St. Bernard Parish, Louisiana</div></div>
+    <div class="contact-card fade-up"><div class="contact-label">Liability Waiver</div><div class="contact-val"><a href="https://forms.gle/vcGTFuq88wMoeLHdA" target="_blank">Sign Here</a></div><div class="contact-sub">Required before first session</div></div>
     <div class="contact-card fade-up"><div class="contact-label">Follow Us</div><div class="contact-val"><a href="https://www.instagram.com/prodigysportsperformance/" target="_blank">@prodigysports</a></div><div class="contact-sub">Instagram · Stay up to date</div></div>
   </div>
 </section>
@@ -298,6 +314,7 @@ footer { background: var(--dark); border-top: 1px solid rgba(245,244,240,0.07); 
     <li><a href="#summer">Summer</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#book">Book</a></li>
+    <li><a href="https://forms.gle/vcGTFuq88wMoeLHdA" target="_blank">Waiver</a></li>
     <li><a href="https://www.instagram.com/prodigysportsperformance/" target="_blank">Instagram</a></li>
   </ul>
   <div class="footer-copy">© 2026 Prodigy Sports Performance.<br>Chalmette, Louisiana.</div>
